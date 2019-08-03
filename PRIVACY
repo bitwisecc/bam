@@ -1,0 +1,12 @@
+This Chrome extension, Bitwise Account Manager (BAM), does not collect
+or leak user information. It uses no third-party services and loads no
+external resources.
+
+User-supplied data including trading API credentials are encrypted
+with a user-supplied password and stored locally.
+
+BAM exposes no interfaces for a host application to extract or tamper
+with sensitive API secrets.
+
+BAM sends signed API requests directly to crypto-exchanges from the
+Chrome browser without relying on any relay server.
