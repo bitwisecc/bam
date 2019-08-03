@@ -1,0 +1,126 @@
+html {
+	font-size: 62.5%;
+}
+
+body, input, textarea {
+	font-family: Menlo, Consolas, monospace;
+	font-size: 1.4rem;
+	line-height: 1.5;
+	margin: 0;
+	padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    background: #1e1e1e;
+    color: #d4d4d4;
+    padding: 2px;
+}
+
+.main {
+    border: 1px solid #ffa500;
+}
+
+.header {
+    white-space: nowrap;
+    background: #ffa500;
+    height: 2.5em;
+    display: flex;
+    align-items: center;
+}
+
+.header > .title {
+    padding-left: 2ch;
+    color: #1e1e1e;
+}
+
+.header > .sep {
+    width: 2.5em;
+    height: 2.5em;
+}
+
+.header > .content {
+    flex-grow: 1;
+    background: #1e1e1e;
+    height: 2.5em;
+    line-height: 2.5em;
+}
+
+.header > .shl {
+    width: 5em;
+    height: 2.5em;
+}
+
+.section {
+    padding: .5em 2ch;
+    border-bottom: 1px solid #444;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.type, .key, .ver {
+    color: #777;
+}
+
+.text {
+    width: 100%;
+    background: transparent;
+    border-bottom: 1px solid #ffa500;
+    color: #ffa500;
+    padding: .5em 1ch;
+}
+
+.text:focus, .import:focus {
+    background: #334;
+}
+
+.export {
+    width: 100%;
+    height: 12em;
+    background: transparent;
+    border: 1px solid #444;
+    color: #d4d4d4;
+    padding: .5em 1ch;
+}
+
+.import {
+    width: 100%;
+    height: 12em;
+    background: transparent;
+    border: 1px solid #ffa500;
+    color: #ffa500;
+    padding: .5em 1ch;
+}
+
+.chosen {
+    color: #ffa500;
+}
+
+.link {
+    color: #dc9;
+    cursor: pointer;
+}
+
+.link:hover {
+    background: #334;
+}
+
+.link.risky:hover {
+    background: #f33;
+}
+
+.p {
+    margin-bottom: 1em;
+}
+
+.success {
+    color: #0a0;
+}
+
+.error {
+    color: #f33;
+}
