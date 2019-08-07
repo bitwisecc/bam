@@ -1,5 +1,3 @@
-const ver = chrome.runtime.getManifest().version;
-
 class Config {
     constructor(onchange) {
         this.onchange = onchange;
@@ -49,7 +47,7 @@ class Config {
             type: account.type,
             key: account.key
         }));
-        return {accounts, ver, locked: this.locked};
+        return {accounts, locked: this.locked};
     }
 
     parse(raw) {

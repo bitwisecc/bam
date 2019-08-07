@@ -1,7 +1,7 @@
 {
     "name": "Bitwise Account Manager",
-    "short_name": "B.A.M.",
-    "version": "1.0.0",
+    "short_name": "BAM",
+    "version": "1.1.0",
     "description": "Manage BitMEX API credentials for secure crypto-trading without exposing API secrets to third parties.",
     "icons": {
         "16": "icon-16.png",
@@ -30,6 +30,12 @@
         "*://*.bitwise.cc/",
         "*://www.bitmex.com/",
         "*://testnet.bitmex.com/"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["*://*.bitwise.cc/*"],
+            "js": ["content.js"]
+        }
     ],
     "externally_connectable": {
         "matches": [
