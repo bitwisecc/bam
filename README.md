@@ -17,11 +17,8 @@ BAM encrypts API credentials on disk using industry standards (AES and PBKDF2) a
     * Alternatively, click the Chrome profile icon at the top right. From the drop-down menu, choose *Manage People* and click *Add Person*.
     * An isolated Chrome profile ensures that no other extension will interfere with BAM or pose a threat to the security of API trading.
 2. Install [Bitwise Account Manager](https://chrome.google.com/webstore/detail/bitwise-account-manager/jabblapkdcnmghnafipabnfkhoieiage) from Chrome Web Store.
-<p align="center">
   <img src="https://github.com/bitwisecc/bam/raw/master/images/bam-web-store-confirmation.png"><br/>
-  Chrome Web Store confirmation
-</p>
-    * The wording of Chrome Web Store's confirmation message might sound confusing or even alarming, but BAM does not need to read or change data on testnet.bitmex.com or www.bitmex.com per se; it only declares these two domains in the [permissions specification](https://github.com/bitwisecc/bam/blob/master/chrome-extension/manifest.json) in order to submit API requests to BitMEX from [mux.js](https://github.com/bitwisecc/bam/blob/master/chrome-extension/mux.js).
+The wording of Chrome Web Store's confirmation message might sound confusing or even alarming, but BAM does not need to read or change data on testnet.bitmex.com or www.bitmex.com per se; it only declares these two domains in the [permissions specification](https://github.com/bitwisecc/bam/blob/master/chrome-extension/manifest.json) in order to submit API requests to BitMEX from [mux.js](https://github.com/bitwisecc/bam/blob/master/chrome-extension/mux.js).
 3. Open [Bitwise Terminal](https://terminal.bitwise.cc/) to confirm that it successfully connects to BAM.
 4. Click the BAM icon at the top right. Add trading APIs in the pop-up.
 5. (Optional but recommended) In BAM, click *Encrypt Data*.
