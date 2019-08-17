@@ -1,4 +1,4 @@
-// Accounts represents a list of API accounts.
+// Accounts class represents a list of API accounts.
 class Accounts {
     // BitMEX and its testnet are the only account types currently supported.
     static types = ["bitmex", "bitmex-testnet"];

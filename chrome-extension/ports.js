@@ -1,3 +1,6 @@
+// Global list of ports (message channels for Chrome extensions).
+// This is only necessary when multiple host pages are connected.
+
 var ports = [];
 
 function addPort(port) {

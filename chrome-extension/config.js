@@ -1,3 +1,4 @@
+// Config class encapsulates account data and the encryption state.
 class Config {
     constructor(onchange) {
         this.onchange = onchange;
@@ -8,6 +9,8 @@ class Config {
         this.raw = "";
     }
 
+    // Serialized data are either hex-encoded (with encryption)
+    // or JSON-encoded (unencrypted).
     async load() {
         chrome.storage.sync.get("config", data => {
             const raw = data.config;
@@ -41,6 +44,8 @@ class Config {
         }
     }
 
+    // Remove API secrets before sharing non-sensitive data
+    // with the host page.
     getCensored() {
         var accounts = this.accounts.data.map(account => ({
             name: account.name,

@@ -1,6 +1,9 @@
+// Pop-up UI for account management.
+
 let maskedKey = s => s.replace(/./g, (c, i) => i < 12 ? c : "*");
 let noWhitespace = s => s.replace(/\s/g, "");
 
+// App is a Mithril UI component to be mounted to document.body.
 let App = {
     view() {
         return m(".main",

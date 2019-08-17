@@ -1,3 +1,5 @@
+// Type-checking functions.
+
 function isObj(v) {
     return Object.prototype.toString.call(v) === "[object Object]";
 }

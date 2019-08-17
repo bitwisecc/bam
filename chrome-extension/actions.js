@@ -1,3 +1,5 @@
+// UI event handlers.
+
 function addAccount() {
     try {
         config.accounts.add({

@@ -1,5 +1,13 @@
+// Crypto-related functions.
+
+// Serialized data are AES-encrypted in GCM mode with a key derived from
+// a user-supplied password using PBKDF2 and SHA-256.
+
+// Length of password salt in bytes.
 const saltLen = 16;
+// Length of IV size in bytes.
 const ivLen = 12;
+// Iteration count for PBKDF2 key derivation.
 const pbkdf2Iter = 1024;
 
 function getRandomBytes(n) {
@@ -106,6 +114,7 @@ async function decrypt(hex, password) {
     }
 }
 
+// Key function to sign BitMEX API requests.
 async function signHMAC(key, payload) {
     const sig = await crypto.subtle.sign("HMAC", key, encodeText(payload));
     return hexEncode(new Uint8Array(sig));
