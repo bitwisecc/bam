@@ -94,7 +94,7 @@ let App = {
                     spellcheck: false,
                     maxlength: 32,
                     value: getState(State.AddName),
-                    oninput: ev => setState(State.AddName, noWhitespace(ev.target.value))
+                    oninput: ev => setState(State.AddName, noWhitespace(ev.target.value), true)
                 })
             ),
             m(".p",
@@ -102,7 +102,7 @@ let App = {
                     placeholder: "Enter API key",
                     spellcheck: false,
                     value: getState(State.AddKey),
-                    oninput: ev => setState(State.AddKey, noWhitespace(ev.target.value))
+                    oninput: ev => setState(State.AddKey, noWhitespace(ev.target.value), true)
                 })
             ),
             m(".p",
@@ -110,7 +110,7 @@ let App = {
                     placeholder: "Enter API secret",
                     type: "password",
                     value: getState(State.AddSecret),
-                    oninput: ev => setState(State.AddSecret, noWhitespace(ev.target.value))
+                    oninput: ev => setState(State.AddSecret, noWhitespace(ev.target.value), true)
                 })
             ),
             m(".p",
@@ -128,7 +128,7 @@ let App = {
                     placeholder: "Enter new password",
                     type: "password",
                     value: getState(State.NewPassword),
-                    oninput: ev => setState(State.NewPassword, ev.target.value)
+                    oninput: ev => setState(State.NewPassword, ev.target.value, true)
                 })
             ),
             m(".p",
@@ -136,7 +136,7 @@ let App = {
                     placeholder: "Repeat new password",
                     type: "password",
                     value: getState(State.RepPassword),
-                    oninput: ev => setState(State.RepPassword, ev.target.value)
+                    oninput: ev => setState(State.RepPassword, ev.target.value, true)
                 })
             ),
             m(".p",
@@ -155,7 +155,7 @@ let App = {
                     type: "password",
                     autofocus: true,
                     value: getState(State.Password),
-                    oninput: ev => setState(State.Password, ev.target.value),
+                    oninput: ev => setState(State.Password, ev.target.value, true),
                     onkeydown: ev => {
                         if (ev.keyCode === 13) {
                             ev.preventDefault();
@@ -201,7 +201,7 @@ let App = {
                     placeholder: "Enter encoded data",
                     spellcheck: false,
                     value: getState(State.ImportData),
-                    oninput: ev => setState(State.ImportData, ev.target.value)
+                    oninput: ev => setState(State.ImportData, ev.target.value, true)
                 })
             ),
             m(".p",
@@ -209,7 +209,7 @@ let App = {
                     placeholder: "Enter password",
                     type: "password",
                     value: getState(State.ImportPassword),
-                    oninput: ev => setState(State.ImportPassword, ev.target.value)
+                    oninput: ev => setState(State.ImportPassword, ev.target.value, true)
                 })
             ),
             m(".p",

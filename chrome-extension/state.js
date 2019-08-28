@@ -49,10 +49,12 @@ function getState(key) {
 // closes an extension's pop-up window. We therefore save the state
 // on disk whenever it changes so that the pop-up window can restore
 // to its previous state when reopened.
-function setState(key, value) {
+function setState(key, value, noRedraw) {
     state[key] = value;
     saveState();
-    m.redraw();
+    if (!noRedraw) {
+        m.redraw();
+    }
 }
 
 function clearState(key) {

@@ -148,9 +148,7 @@ Be cautious that this will overwrite your current account data.
 
 BAM's [full source code](https://github.com/bitwisecc/bam) is released under the very permissive MIT license.
 
-For better security and performance, no externally hosted resources are loaded at runtime.
-The only code dependency — [MithrilJS v1.1.6](https://github.com/MithrilJS/mithril.js/releases/download/v1.1.6/mithril.min.js) — is bundled with the extension.
-MithrilJS is also open-source and [MIT-licensed](https://github.com/MithrilJS/mithril.js/blob/next/LICENSE).
+For better security and performance, this extension has no external dependencies.
 
 Bug reports or fixes are always welcome on Github.
 However, please refrain from sending pull requests with substantial changes or new dependencies

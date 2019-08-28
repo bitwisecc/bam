@@ -23,6 +23,7 @@ function renameAccount(account) {
         try {
             config.accounts.rename(account.name, name.trim());
             config.save();
+            setState(State.View, View.Main);
         } catch (e) {
             alert(e);
         }
@@ -34,6 +35,7 @@ function deleteAccount(account) {
         try {
             config.accounts.remove(account);
             config.save();
+            setState(State.View, View.Main);
         } catch (e) {
             alert(e);
         }
