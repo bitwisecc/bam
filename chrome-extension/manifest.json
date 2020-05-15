@@ -1,7 +1,7 @@
 {
     "name": "Bitwise Account Manager",
     "short_name": "BAM",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "description": "Manage BitMEX API credentials for secure crypto-trading without exposing API secrets to third parties.",
     "icons": {
         "16": "icon-16.png",

@@ -43,10 +43,7 @@ function deleteAccount(account) {
 }
 
 async function setPassword() {
-    if (!getState(State.NewPassword)) {
-        setState(State.ErrorSetPassword, "Empty new password");
-        return;
-    }
+    const empty = !getState(State.NewPassword);
     if (getState(State.NewPassword) !== getState(State.RepPassword)) {
         setState(State.ErrorSetPassword, "Password mismatch");
         return;
@@ -57,7 +54,7 @@ async function setPassword() {
         await config.save();
         clearState([State.NewPassword, State.RepPassword]);
         setState(State.View, View.Main);
-        alert("A new password has been set successfully.");
+        alert(empty ? "Password is successfully cleared." : "A new password has been set successfully.");
     } catch (e) {
         alert(e);
     }

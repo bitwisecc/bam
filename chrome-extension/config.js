@@ -81,7 +81,7 @@ class Config {
     }
 
     async setPassword(password) {
-        this.key = await importKeyForDerivation(password);
+        this.key = password ? await importKeyForDerivation(password) : null;
         await this.save();
     }
 
