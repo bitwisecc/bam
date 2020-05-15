@@ -1,5 +1,6 @@
-// Message router which currently exposes only one interface
-// that signs and submits a BitMEX API request.
+// Message router exposes two APIS:
+// "req" signs and submits a BitMEX API request.
+// "ws" signs a BitMEX websocket authentication request.
 
 // Using Symbol as a key to cache encryption key in memory
 // to bypass JSON serialization.
@@ -70,6 +71,27 @@ var mux = {
             }
             throw e;
         }
+    },
+
+    // The "ws" action handler returns a signature and an expiration timestamp to be
+    // used in an authKeyExpires request for BitMEX's websocket API.
+    // A valid message is expected to have the following property:
+    // "acc" - account name
+    "ws": async msg => {
+        // Look up account by name.
+        const acc = config.accounts.findByName(msg.acc);
+        if (!acc) {
+            throw Error("Account not found");
+        }
+
+        if (!acc[signingKey]) {
+            acc[signingKey] = await importKeyForSigning(acc.secret);
+        }
+        const expires = Math.round(Date.now() / 1000) + 60; // 1 min in the future
+        const sig = await signHMAC(acc[signingKey], "GET/realtime" + expires);
+        return {
+            result: {expires, sig}
+        };
     }
 };
 
